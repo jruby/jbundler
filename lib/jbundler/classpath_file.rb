@@ -49,7 +49,7 @@ module JBundler
     end
 
     def exists?
-      File.exists?(@classpathfile)
+      File.exist?(@classpathfile)
     end
 
     def missing?( jarfile )
@@ -100,7 +100,7 @@ module JBundler
       return if path =~ /pom$/
       if local_repo
         path = path.sub( /#{local_repo}/, '' )
-        unless File.exists?( path )
+        unless File.exist?( path )
           file.puts "JBUNDLER_#{prefix}CLASSPATH << (JBUNDLER_LOCAL_REPO + '#{path}')"
           path = nil
         end

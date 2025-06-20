@@ -33,7 +33,7 @@ module JBundler
     def initialize
       if ENV.has_key? 'HOME'
         homefile = File.join(ENV['HOME'], RC_FILE)
-        home_config = YAML.load_file(homefile) if File.exists?(homefile)
+        home_config = YAML.load_file(homefile) if File.exist?(homefile)
       else
         home_config = nil
       end
@@ -41,7 +41,7 @@ module JBundler
       @basedir = find_basedir( File.expand_path( '.' ) )
       @basedir ||= File.expand_path( '.' )
       file = join_basedir( RC_FILE )
-      pwd_config = YAML.load_file(file) if File.exists?(file)
+      pwd_config = YAML.load_file(file) if File.exist?(file)
       @config.merge!(pwd_config || {})
     end
     
@@ -55,11 +55,11 @@ module JBundler
 
     def find_basedir( dir )
       f = File.join( dir, RC_FILE )
-      return dir if File.exists?( f )
+      return dir if File.exist?( f )
       f = File.join( dir, _jarfile )
-      return dir if File.exists?( f )
+      return dir if File.exist?( f )
       f = File.join( dir, _gemfile )
-      return dir if File.exists?( f )
+      return dir if File.exist?( f )
       parent = File.dirname( dir )
       if dir != ENV['HOME'] && dir != parent
         find_basedir( parent )

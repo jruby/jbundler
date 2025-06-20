@@ -8,11 +8,11 @@ module JBundler
     end
 
     def vendored?
-      File.exists?( @dir ) && Dir[ File.join( @dir, '*' ) ].size > 0
+      File.exist?( @dir ) && Dir[ File.join( @dir, '*' ) ].size > 0
     end
 
     def require_jars
-      if File.exists?(@jars_lock)
+      if File.exist?(@jars_lock)
         $LOAD_PATH << @dir unless $LOAD_PATH.include? @dir
         ENV_JAVA['jars.lock'] = @jars_lock
         Jars.require_jars_lock!
@@ -24,7 +24,7 @@ module JBundler
 
     def require_jars_legacy
       jars = File.join( @dir, 'jbundler.rb' )
-      if File.exists?( jars )
+      if File.exist?( jars )
         $LOAD_PATH << @dir unless $LOAD_PATH.include? @dir
         require jars
       else
