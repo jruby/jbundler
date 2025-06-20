@@ -1,4 +1,4 @@
-require 'jar_installer'
+require 'jars/installer'
 module JBundler
   class Vendor
 
