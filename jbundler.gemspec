@@ -1,8 +1,9 @@
 #-*- mode: ruby -*-
+require_relative 'lib/jbundler/version.rb'
 
 Gem::Specification.new do |s|
   s.name = 'jbundler'
-  s.version = '0.9.5'
+  s.version = JBundler::VERSION
 
   s.summary = 'managing jar dependencies'
   s.description = <<-END
