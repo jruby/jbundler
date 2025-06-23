@@ -31,6 +31,6 @@ END
   s.add_runtime_dependency "ruby-maven", "~> 3.3", '>= 3.3.8'
   s.add_runtime_dependency "bundler", "> 1.5", "< 3.0.0"
   s.add_runtime_dependency "jar-dependencies", "~> 0.3"
-  s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "rake", "~> 13.0"
   s.add_development_dependency "minitest", "~> 5.3"
 end
