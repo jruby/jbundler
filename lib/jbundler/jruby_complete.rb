@@ -25,7 +25,7 @@ module JBundler
 
       exec( 'dependency:tree' )
 
-      if File.exists?( @tree )
+      if File.exist?( @tree )
         puts File.read( @tree )
       end
     end

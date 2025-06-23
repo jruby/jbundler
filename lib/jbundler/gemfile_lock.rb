@@ -28,7 +28,7 @@ module JBundler
 
     def initialize(jarfile, lockfile = 'Gemfile.lock')
       @jarfile = jarfile
-      @lockfile = lockfile if File.exists?(lockfile)
+      @lockfile = lockfile if File.exist?(lockfile)
     end
 
     def exists?

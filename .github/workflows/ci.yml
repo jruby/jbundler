@@ -1,0 +1,12 @@
+name: ci.yml
+on: [push, pull_request]
+
+jobs:
+  test:
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 'jruby-head'
+    - run: bundle
+    - run: bundle exec rake specs

@@ -5,7 +5,7 @@ gemfile
 properties( 'jruby.versions' => "${jruby.version}, 9.0.4.0",
             # just lock the versions
             'jruby.version' => '9.2.9.0',
-            'jruby.plugins.version' => '1.1.8' )
+            'jruby.plugins.version' => '2.0.1' )
 
 jruby_plugin( :minitest, :minispecDirectory => "spec/*_spec.rb" ) do
   execute_goals(:spec)
@@ -20,7 +20,7 @@ plugin :invoker, '1.8' do
                  :properties => { 'jbundler.version' => '${project.version}',
                    'jruby.version' => '${jruby.version}',
                    'jruby.plugins.version' => '${jruby.plugins.version}',
-                   'bundler.version' => '1.9.3', 
+                   'bundler.version' => '2.3.13', 
                    # dump pom for the time being - for travis
                    'polyglot.dump.pom' => 'pom.xml' } )
 end

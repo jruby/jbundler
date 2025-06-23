@@ -49,7 +49,7 @@ module JBundler
       
       jar = to_jar( group_id, artifact_id, version, classifier )
       ( [ Jars.home ] + $LOAD_PATH ).each do |path|
-        if File.exists?( f = File.join( path, jar ) )
+        if File.exist?( f = File.join( path, jar ) )
           return f
         end
       end
