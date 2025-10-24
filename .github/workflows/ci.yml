@@ -1,13 +1,24 @@
-name: ci.yml
-on: [push, pull_request]
+name: Ruby
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby-version: [jruby-9.4, jruby-10.0]
+
     steps:
-    - uses: actions/checkout@v4
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 'jruby-head'
-    - run: bundle
-    - run: bundle exec rake specs
+      - uses: actions/checkout@v5
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+      - run: bundle
+      - run: bundle exec rake specs
