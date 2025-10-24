@@ -14,7 +14,7 @@ END
   s.email = ['m.kristian@web.de']
   s.homepage = 'https://github.com/jruby/jbundler'
 
-  s.bindir = "bin"
+  s.bindir = 'bin'
   s.executables = ['jbundle']
 
   s.license = 'MIT'
@@ -27,11 +27,11 @@ END
   s.files += Dir['Gemfile*']
   s.test_files += Dir['spec/*_spec.rb']
 
-  s.add_runtime_dependency 'maven-tools', '1.2.3'
+  s.add_runtime_dependency 'maven-tools', '~> 1.2.3'
+  s.add_runtime_dependency 'ruby-maven', '~> 3.3', '>= 3.3.8'
+  s.add_runtime_dependency 'bundler', '> 1.5', '< 3'
+  s.add_runtime_dependency 'jar-dependencies', '~> 0.3'
 
-  s.add_runtime_dependency "ruby-maven", "~> 3.3", '>= 3.3.8'
-  s.add_runtime_dependency "bundler", "> 1.5", "< 3.0.0"
-  s.add_runtime_dependency "jar-dependencies", "~> 0.3"
-  s.add_development_dependency "rake", "~> 13.0"
-  s.add_development_dependency "minitest", "~> 5.3"
+  s.add_development_dependency 'rake', '~> 13.0'
+  s.add_development_dependency 'minitest', '~> 5.3'
 end
