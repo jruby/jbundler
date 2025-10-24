@@ -12,7 +12,7 @@ END
 
   s.authors = ['Christian Meier']
   s.email = ['m.kristian@web.de']
-  s.homepage = 'https://github.com/mkristian/jbundler'
+  s.homepage = 'https://github.com/jruby/jbundler'
 
   s.bindir = "bin"
   s.executables = ['jbundle']
