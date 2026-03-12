@@ -7,7 +7,7 @@ require 'maven/tools/gemspec_dependencies'
 require 'maven/tools/jarfile'
 require 'maven/ruby/maven'
 require 'fileutils'
-require 'jar_installer'
+require 'jars/installer'
 
 module JBundler
   class LockDown
