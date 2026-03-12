@@ -1,6 +1,7 @@
 # jbundler
 
-* [![Build Status](https://secure.travis-ci.org/mkristian/jbundler.svg)](http://travis-ci.org/mkristian/jbundler)
+[![Gem Version](https://img.shields.io/gem/v/jbundler)](https://rubygems.org/gems/jbundler)
+[![master Build Status](https://github.com/jruby/jbundler/actions/workflows/ci.yml/badge.svg)](https://github.com/jruby/jbundler/actions/workflows/ci.yml?query=branch%3Amaster) (master)
 
 Manage jar dependencies similar to how **bundler** manages gem dependencies:
 
@@ -11,8 +12,8 @@ Manage jar dependencies similar to how **bundler** manages gem dependencies:
 
 differences compared to **bundler**
 
-* you need to run ```bundle install``` first if any of the gems have jar dependencies.
-* all one command ```jbundle```, see ```jbundle help``` on the possible options and how to update a single jar, etc.
+* you need to run `bundle install` first if any of the gems have jar dependencies.
+* all one command `jbundle`, see `jbundle help` on the possible options and how to update a single jar, etc.
 
 ## Get started
 
@@ -100,7 +101,7 @@ The whole project actually started with a controversial discussion on a [pull re
 License
 -------
 
-Almost all code is under the MIT license but the java class (AetherSettings.java)[https://github.com/mkristian/jbundler/blob/master/src/main/java/jbundler/AetherSettings.java] which was derived from EPL licensed code.
+JBundler is [MIT-licensed](./MIT-LICENSE).
 
 Contributing
 ------------
