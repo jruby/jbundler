@@ -29,7 +29,7 @@ END
 
   s.add_runtime_dependency 'maven-tools', '~> 1.2.3'
   s.add_runtime_dependency 'ruby-maven', '~> 3.3', '>= 3.3.8'
-  s.add_runtime_dependency 'bundler', '> 1.5', '< 3'
+  s.add_runtime_dependency 'bundler', '> 1.5', '< 5'
   s.add_runtime_dependency 'jar-dependencies', '~> 0.3'
 
   s.add_development_dependency 'rake', '~> 13.0'

@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        ruby-version: [jruby-9.4, jruby-10.0]
+        ruby-version: [jruby-9.4, jruby-10.0, jruby-10.1]
 
     steps:
       - uses: actions/checkout@v5
@@ -20,5 +20,5 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
-      - run: bundle
+      - run: bundle install
       - run: bundle exec rake specs
